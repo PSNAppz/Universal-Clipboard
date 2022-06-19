@@ -7,7 +7,6 @@
 
 
 import socketio
-import platform
 import pyperclip
 
 
