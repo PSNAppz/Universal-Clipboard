@@ -1,5 +1,6 @@
 import eventlet
 import socketio
+import pyperclip
 
 sio = socketio.Server()
 app = socketio.WSGIApp(sio)
@@ -11,6 +12,12 @@ def connect(sid, environ):
 @sio.event
 def my_message(sid, data):
     print('message ', data)
+
+@sio.event
+def clipboard(sid, data):
+    print('message ', data)
+    pyperclip.copy(data)    
+
 
 @sio.event
 def disconnect(sid):
