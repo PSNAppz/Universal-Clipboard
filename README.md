@@ -4,6 +4,7 @@ Universal clipboard is useful when you want to copy something(preferrably plaint
 ### Curated Features
 
 
--[x]:Copy plaintext from one device to another
--[]: Copy images/files from one device to another
--[]: Work outside localnetwork
+- [x] Copy plaintext from one device to another
+- [ ] Copy images/files from one device to another
+- [ ] Work outside localnetwork
+
