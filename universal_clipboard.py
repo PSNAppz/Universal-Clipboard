@@ -7,6 +7,9 @@
 
 
 import socketio
+import platform
+import pyperclip
+
 
 sio = socketio.Client()
 
@@ -22,5 +25,11 @@ def connect_error(data):
 def disconnect():
     print("I'm disconnected!")
 
-sio.connect('http://localhost:5007')   
-sio.wait() 
+sio.connect('ws://192.168.1.46:5007')   
+while True:
+    try:
+        print(pyperclip.paste())
+        sio.emit('clipboard', pyperclip.paste())
+    except KeyboardInterrupt:
+        break    
+    
